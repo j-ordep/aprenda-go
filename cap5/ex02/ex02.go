@@ -12,10 +12,6 @@ func main() {
 	e := (10 >= 100)
 	f := (10 > 10)
 
-	valores := []bool{a,b,c,d,e,f}
-
-	for _, v := range valores {
-		fmt.Printf("%v\n", v)
-	}
+	fmt.Printf("%v \n%v \n%v \n%v \n%v \n%v\n", a,b,c,d,e,f)
 
 }
