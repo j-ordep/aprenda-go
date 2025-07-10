@@ -55,16 +55,16 @@ func main() {
 
 	uzischema := json.NewEncoder(os.Stdout) // Crie um Encoder que vai escrever a saída em formato JSON diretamente no terminal(os.Stdout).
 
-	err := uzischema.Encode(users) // como uzischema é um encoder, ele tem acesso ao método Encode()
+	err := uzischema.Encode(users) // como uzischema é um encoder, ele tem acesso ao método Encode(), que transforma o parâmetro em JSON
 	if err != nil {
 		fmt.Println("ERRO:", err)
 	}
 
 	fmt.Println(users)
 
-/* Posso fazer diret:
+/* forma direta: 
 
-	err := json.NewEncoder(os.Stdout).Encode(users)
+	err := json.NewEncoder(os.Stdout).Encode(users) // method chaining
 	if err != nil {
 		fmt.Println("ERRO:", err)
 	}
