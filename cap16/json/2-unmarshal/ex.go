@@ -5,11 +5,9 @@ import (
 	"fmt"
 )
 
-// Marshal e Unmarshal
+// Unmarshal
 
-// converte struct (ou map, slice ...) para json
-
-// Unmarshal converte json para código
+// converte JSON para código
 
 type informacoes struct {
 	Nome string `json:"Nome"`
@@ -18,10 +16,12 @@ type informacoes struct {
 
 func main() {
 
-	// Marshal trabalha com []byte = "slice de byte"
+	// Unarshal trabalha com []byte = "slice de byte"
 	meuJson := []byte(`{"Nome": "James", "Idade":40}`)
 	
 	var pessoa1 informacoes
+
+	// pessoa1 passa a ter os dados do JSON
 	err := json.Unmarshal(meuJson, &pessoa1) // Unmarshal ( json_recebido -> variavel_struct )
 	if err != nil {
 		fmt.Println("erro:", err)

@@ -6,7 +6,7 @@ import (
 )
 
 // Marshal
-// converte struct (ou map, slice ...) para json
+// converte struct (ou map, slice ...) para JSON
 
 type Pessoa struct {
 	Nome string `json:"Nome"`
