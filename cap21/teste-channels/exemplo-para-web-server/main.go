@@ -39,7 +39,7 @@ import (
 func worker(workerId int, msg chan int) { // receive <-canal
 
 	for res := range msg {
-		fmt.Println("workerId>", workerId, "msg:",res)
+		fmt.Println("workerId:", workerId, "msg:",res)
 		time.Sleep(time.Second)
 	}
 
@@ -48,10 +48,7 @@ func worker(workerId int, msg chan int) { // receive <-canal
 func main() {
 	msg := make(chan int) // o canal é uma fila concorrente (thread-safe)
 
-	// todo poder do go
-
-	// ver a aula do wesley de novo
-	// bota no 52 min
+	// aqui esta o poder do go
 
 	go worker(1, msg)
 	go worker(2, msg)
