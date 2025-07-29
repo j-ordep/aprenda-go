@@ -1,5 +1,11 @@
 package main
 
+import (
+	"aprenda-go/cap26/ex01/cachorro"
+	"fmt"
+	"log"
+)
+
 /*
 Crie um package "cachorro".
 Este package deverá exportar uma função Idade, que toma como parâmetro um número de anos e retorna a idade equivalente em anos caninos. (1 ano humano → 7 anos caninos)
@@ -9,5 +15,10 @@ Rode um local server com godoc e leia sua documentação.
 */
 
 func main() {
+	idadeDeCachorro, err := cachorro.Idade(5)
+	if err != nil {
+		log.Println(err)
+	}
 
+	fmt.Println(idadeDeCachorro)
 }
