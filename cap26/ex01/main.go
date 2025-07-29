@@ -14,6 +14,8 @@ Rode seu programa para verificar se ele funciona.
 Rode um local server com godoc e leia sua documentação.
 */
 
+// rode godoc -http :8080  
+
 func main() {
 	idadeDeCachorro, err := cachorro.Idade(5)
 	if err != nil {
